@@ -1,0 +1,15 @@
+lancer zookeeper :
+.\bin\windows\zookeeper-server-start.bat .\config \zookeeper.properties
+
+lancer kafka : 
+.\bin\windows\kafka-server-start.bat
+.\config\server.properties
+
+
+check topics list :
+.\bin\windows\kafka-topics.bat --list --zookeeper localhost:2181
+
+create topic :
+.\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic "name topic"
+
+ 
